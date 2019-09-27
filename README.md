@@ -1,6 +1,6 @@
-# mangadex-tama
+# MangaDex Tama <img src="https://raw.githubusercontent.com/kvnxiao/mangadex-tama/master/src/icon/icon48.png"></img>
 
-A companion web extension for mangadex.org.
+> A companion web extension for mangadex.org.
 
 Currently provides on-hover thumbnail previews of manga titles in your follows page.
 
