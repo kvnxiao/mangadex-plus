@@ -3,7 +3,7 @@
   "name": "Mangadex Tama",
   "short_name": "Tama",
   "description": "Tama is your companion extension for mangadex.org",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Kevin Xiao",
   "icons": {
     "16": "icon16.png",
