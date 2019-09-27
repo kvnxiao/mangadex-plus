@@ -1,7 +1,7 @@
 const page = document.getElementsByClassName("chapter-container")[0]
-const rows = page.getElementsByClassName(
-  "col col-md-3 row no-gutters flex-nowrap align-items-start p-2 font-weight-bold border-bottom",
-)
+const titles: HTMLCollectionOf<HTMLAnchorElement> = page.getElementsByClassName(
+  "manga_title",
+) as HTMLCollectionOf<HTMLAnchorElement>
 
 const matchMangaTitleLink = /mangadex.org\/title\/([0-9]+)\//
 
@@ -13,23 +13,20 @@ const thumbnailImage = document.createElement("img")
 thumbnailImage.className = "tama-thumbnail"
 page.appendChild(thumbnailImage)
 
-for (const row of rows) {
-  if (row.children.length > 0) {
-    const anchor: HTMLAnchorElement = row.children[0] as HTMLAnchorElement
-    const match = matchMangaTitleLink.exec(anchor.href)
-    if (match !== null) {
-      const mangaId = match[1]
-      const thumbnail = getThumbnailLink(mangaId)
+for (const title of titles) {
+  const match = matchMangaTitleLink.exec(title.href)
+  if (match !== null) {
+    const mangaId = match[1]
+    const thumbnail = getThumbnailLink(mangaId)
 
-      anchor.addEventListener("mouseenter", (event: MouseEvent) => {
-        thumbnailImage.src = thumbnail
-        const bounds = anchor.getBoundingClientRect()
-        thumbnailImage.style.top = `${document.documentElement.scrollTop + bounds.top - 50}px`
-        thumbnailImage.style.left = bounds.left < 140 ? "240px" : `${bounds.left - 130}px`
-      })
-      anchor.addEventListener("mouseleave", (event: MouseEvent) => {
-        thumbnailImage.src = ""
-      })
-    }
+    title.addEventListener("mouseenter", (event: MouseEvent) => {
+      thumbnailImage.src = thumbnail
+      const bounds = title.getBoundingClientRect()
+      thumbnailImage.style.top = `${document.documentElement.scrollTop + bounds.top - 50}px`
+      thumbnailImage.style.left = bounds.left < 140 ? "240px" : `${bounds.left - 130}px`
+    })
+    title.addEventListener("mouseleave", (event: MouseEvent) => {
+      thumbnailImage.src = ""
+    })
   }
 }

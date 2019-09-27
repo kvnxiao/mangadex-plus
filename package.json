@@ -1,11 +1,14 @@
 {
   "name": "mangadex-tama",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A companion web extension for mangadex.org",
   "main": "index.js",
   "repository": "git@github.com:kvnxiao/mangadex-tama.git",
   "author": "Kevin Xiao <xlzqwerty1@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "webpack"
+  },
   "devDependencies": {
     "@types/chrome": "^0.0.86",
     "@types/webpack-env": "^1.13.9",
