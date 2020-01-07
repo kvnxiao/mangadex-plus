@@ -3,7 +3,7 @@
   "name": "Mangadex Tama",
   "short_name": "Tama",
   "description": "Tama is your companion extension for mangadex.org",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "Kevin Xiao",
   "icons": {
     "16": "icon16.png",
@@ -12,7 +12,12 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://mangadex.org/follows", "https://mangadex.org/follows/chapters/**"],
+      "matches": [
+        "https://mangadex.org/follows",
+        "https://mangadex.org/follows/chapters/**",
+        "https://mangadex.cc/follows",
+        "https://mangadex.cc/follows/chapters/**"
+      ],
       "js": ["bundle.js"],
       "css": ["bundle.css"]
     }
