@@ -3,10 +3,12 @@ const titles: HTMLCollectionOf<HTMLAnchorElement> = page.getElementsByClassName(
   "manga_title",
 ) as HTMLCollectionOf<HTMLAnchorElement>
 
-const matchMangaTitleLink = /mangadex.org\/title\/([0-9]+)\//
+const hostName = window.location.hostname
+
+const matchMangaTitleLink = new RegExp(`${hostName}\/title\/([0-9]+)\/`)
 
 function getThumbnailLink(id: string): string {
-  return `https://mangadex.org/images/manga/${id}.thumb.jpg`
+  return `https://${hostName}/images/manga/${id}.thumb.jpg`
 }
 
 const thumbnailImage = document.createElement("img")
