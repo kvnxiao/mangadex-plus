@@ -11,7 +11,7 @@
   },
   "devDependencies": {
     "@types/chrome": "^0.0.99",
-    "@types/webpack-env": "^1.15.1",
+    "@types/webpack-env": "^1.15.2",
     "autoprefixer": "^9.7.4",
     "copy-webpack-plugin": "^5.1.1",
     "css-loader": "^3.4.2",
