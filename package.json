@@ -10,7 +10,7 @@
     "build": "webpack"
   },
   "devDependencies": {
-    "@types/chrome": "^0.0.99",
+    "@types/chrome": "^0.0.115",
     "@types/webpack-env": "^1.15.1",
     "autoprefixer": "^9.7.4",
     "copy-webpack-plugin": "^5.1.1",
