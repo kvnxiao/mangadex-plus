@@ -28,10 +28,12 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
   },
   plugins: [
-    new CopyPlugin([
-      { from: "./src/manifest.json", to: path.resolve(__dirname, "dist/manifest.json") },
-      { from: "./src/icon/*.png", to: path.resolve(__dirname, "dist/"), flatten: true },
-    ]),
+    new CopyPlugin({
+      patterns: [
+        { from: "./src/manifest.json", to: path.resolve(__dirname, "dist/manifest.json") },
+        { from: "./src/icon/*.png", to: path.resolve(__dirname, "dist/"), flatten: true },
+      ],
+    }),
     new MiniCssExtractPlugin({
       filename: "bundle.css",
     }),
