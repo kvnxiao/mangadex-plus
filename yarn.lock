@@ -51,10 +51,10 @@
   dependencies:
     mkdirp "^1.0.4"
 
-"@types/chrome@^0.0.119":
-  version "0.0.119"
-  resolved "https://registry.yarnpkg.com/@types/chrome/-/chrome-0.0.119.tgz#12a2af96886d0c7210590928729ebf622eb67a58"
-  integrity sha512-Hpl2pFrtnqyHQKTz15HcJ2gLaSojb7HozEwp1OX10ERqaBcfVNnkn+Vq0YeSMiKgvwf/zz73GazK05obaQ3rhg==
+"@types/chrome@^0.0.137":
+  version "0.0.137"
+  resolved "https://registry.yarnpkg.com/@types/chrome/-/chrome-0.0.137.tgz#5ea73ee6e874880ecdfaccd5b378c541c7da87ec"
+  integrity sha512-rMJOMqdX+RvVcl/F8VV6amYkZVkGj9KXM1EWGi5XxB/xdNB47CwBwInaMKFm+mgftdO9XWR1m4zgHiR6nrIX5w==
   dependencies:
     "@types/filesystem" "*"
     "@types/har-format" "*"
